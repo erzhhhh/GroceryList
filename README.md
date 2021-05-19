@@ -14,21 +14,21 @@ There are two Gradle tasks for testing the project:
 
 ### Running on a virtual device
 
-1.  Clone repository https://github.com/erzhhhh/skysky.git
+1.  Clone repository https://github.com/choco-hire/mobile-exercise-ErzhenaD.git
 2.  Open the AVD Manager (**Tools** -> **Android** -> **AVD Manager**), https://i.imgur.com/881HJHx.png
 3.  Create a new Virtual Device
 4.  Finish and click play!
 
 ### Running on a hardware device
 
-1.  Clone repository https://github.com/erzhhhh/skysky.git
+1.  Clone repository https://github.com/choco-hire/mobile-exercise-ErzhenaD.git
 2.  [Configure Your System to Detect Your Android Device][96]
 3.  Finish and click play!
 
 Screenshots
 -----------
 
-![Start](screenshots/login.jpeg "Login page")
+![Start](screenshots/login.png "Login page")
 ![List of products](screenshots/productsList.png "List of products")
 ![Choosing products](screenshots/productsChoose.png "Choosing products")
 ![Create an order](screenshots/productsChoose.png "Create an order")
