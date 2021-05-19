@@ -1,105 +1,94 @@
-# mobile-exercise-template
-Mobile exercise template for both iOS and Android applications.
+Choco (test app)
+=================
 
-**MOBILE HOMEWORK**
+The #1 ordering tool for restaurants & suppliers
 
-So you want to become a Chocorian!? Here at Choco, we’re working hard every day to make our app the best ordering app in the galaxy. So in order for you to have a taste of what we’re working on. You’re going to have the opportunity to show us how amazing your coding skills are by developing your very own simplified version of the Choco ordering app.
+Getting Started
+---------------
+This project uses the Gradle build system. To build this project, use the
+`gradlew build` command or use "Import Project" in Android Studio.
 
-**PROCESS**
+There are two Gradle tasks for testing the project:
+* `connectedAndroidTest` - for running Espresso on a connected device
+* `test` - for running unit tests
 
-1. This repo is your own, you can use it to work and commit your solution here.
-2. Solve the exercise within a timeframe of 1 week. It normally takes around 3-6 hours to complete.
-3. We review your solution within 2 days, provide feedback for you and schedule a call to discuss as a next step.
-4. Demo your solution to future colleagues (product managers and engineers) on the call.
+### Running on a virtual device
 
-The app should contain the following features:
+1.  Clone repository https://github.com/erzhhhh/skysky.git
+2.  Open the AVD Manager (**Tools** -> **Android** -> **AVD Manager**), https://i.imgur.com/881HJHx.png
+3.  Create a new Virtual Device
+4.  Finish and click play!
 
-**LOGIN** 
+### Running on a hardware device
 
-The user should be able to log in with email and password. After logging in the app should keep a login session until the user explicitly logs out. When logging out the app should clean all user data and redirect the user to the login screen.
+1.  Clone repository https://github.com/erzhhhh/skysky.git
+2.  [Configure Your System to Detect Your Android Device][96]
+3.  Finish and click play!
 
-For the login feature, the following API should be used:
+Screenshots
+-----------
 
-**Credentials:**
+![Start](screenshots/login.jpeg "Login page")
+![List of products](screenshots/productsList.jpeg "List of products")
+![Choosing products](screenshots/productsChoose.jpeg "Choosing products")
+![Create an order](screenshots/productsChoose.jpeg "Create an order")
+![Name the order](screenshots/nameTheOrder.jpeg "Name the order")
+![List of orders](screenshots/ordersList.jpeg "List of orders")
+![Order details](screenshots/orderDetails.jpeg "Detailed information about the order")
+![List of products_dark](screenshots/productsListDark.jpeg "List of products with dark mode")
+![Order details_dark](screenshots/orderDetailsDark.jpeg "Detailed information about the order with dark mode")
 
-**User:** user@choco.com
-**Password:** chocorian
+Libraries Used
+--------------
+* [Foundation][0] - Components for core system capabilities, Kotlin extensions and support for
+  multidex and automated testing.
+  * [AppCompat][1] - Degrade gracefully on older versions of Android.
+  * [Android KTX][2] - Write more concise, idiomatic Kotlin code.
+  * [Test][4] - An Android testing framework for unit and runtime UI tests.
+* [Architecture][10] - A collection of libraries that help you design robust, testable, and
+  maintainable apps. Start with classes for managing your UI component lifecycle and handling data
+  persistence.
+  * [Data Binding][11] - Declaratively bind observable data to UI elements.
+  * [Lifecycles][12] - Create a UI that automatically responds to lifecycle events.
+  * [LiveData][13] - Build data objects that notify views when the underlying database changes.
+  * [ROOM][16] - The Room persistence library provides an abstraction layer over SQLite to allow fluent database access while harnessing the full power of SQLite
+  * [ViewModel][17] - Store UI-related data that isn't destroyed on app rotations. Easily schedule
+     asynchronous tasks for optimal execution.
+* [UI][30] - Details on why and how to use UI Components in your apps - together or separate
+  * [Animations & Transitions][31] - Move widgets and transition between screens.
+  * [Fragment][34] - A basic unit of composable UI.
+  * [Layout][35] - Lay out widgets using different algorithms.
+* Third party and miscellaneous libraries
+  * [Dagger][92]: for [dependency injection][93]
+  * [RxJava][91] for managing background threads 
+  * [OkHttp][94] for sending and receive HTTP-based network requests
+  * [Retrofit][95] for retrieving and uploading JSON (or other structured data) via a REST based webservice
 
-**Endpoint:**
-[POST] *https://glc4swy1fd.execute-api.eu-west-1.amazonaws.com/choco/login*
+[0]: https://developer.android.com/jetpack/components
+[1]: https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat
+[2]: https://developer.android.com/kotlin/ktx
+[4]: https://developer.android.com/training/testing/
+[10]: https://developer.android.com/jetpack/arch/
+[11]: https://developer.android.com/topic/libraries/data-binding/
+[12]: https://developer.android.com/topic/libraries/architecture/lifecycle
+[13]: https://developer.android.com/topic/libraries/architecture/livedata
+[14]: https://developer.android.com/topic/libraries/architecture/navigation/
+[16]: https://developer.android.com/topic/libraries/architecture/room
+[17]: https://developer.android.com/topic/libraries/architecture/viewmodel
+[18]: https://developer.android.com/topic/libraries/architecture/workmanager
+[30]: https://developer.android.com/guide/topics/ui
+[31]: https://developer.android.com/training/animation/
+[34]: https://developer.android.com/guide/components/fragments
+[35]: https://developer.android.com/guide/topics/ui/declaring-layout
+[91]: https://github.com/ReactiveX/RxJava
+[92]: https://dagger.dev/
+[93]: https://developer.android.com/training/dependency-injection
+[94]: https://square.github.io/okhttp/
+[95]: https://square.github.io/retrofit/
+[96]: https://developer.android.com/studio/run/device
 
-**Request body:**
+Support
+-------
 
-{
-  email: “email@email.com” 
-  password: “password”
-}
-
-
-**Response body:**
-
-{
-  token: “1234567890”
-}
-
-
-**LIST PRODUCTS AND CREATE ORDERS**
-
-The user should be able to see a list of products where multiple products can be selected to create an order. After selecting the products the user should be able to click on a button to create the order.
-
-For the fetching products, the following API should be used:
-
-**Endpoint:**
-
-[GET] *https://glc4swy1fd.execute-api.eu-west-1.amazonaws.com/choco/products?token={LOGIN_TOKEN}*
-
-**Response body:**
-[
-  {
-
-    Id: “5e8c3c48-af49-425b-a6d9-f37f3511e4fa” 
-    name: “Product 1”,
-    Description: “This is product 1”,
-    price: 1000, 
-    photo:”http://xyz.com/prod1.jpg”
-
-  } 
-]
-
-
-The created orders should be persisted locally using the persistence strategy of your choice.
-
-
-**LIST ORDERS**
-
-The user should be able to see the list of orders created in a different tab or screen.
-The orders should be fetched from the local storage.
-
-
-**ORDER DETAIL**
-
-After clicking on an order in the order list, the app should show a different screen with the order details containing the list of products and the total price of the order.
-
-
-**RULES**
-
-This task should be completed in **one week (7 days).**
-
-The app should be developed using the following languages:
-- **Kotlin** for Android
-- **Swift** for iOS
-
-
-In order to complete this test your app **must:**
-- Compile with no errors
-- Contain no crashes
-- Contain all the features
-   
- We expect that a badass Chocorian will follow these criteria:
-- S.O.L.I.D and D.R.Y principles
-- Architectural cleanliness / Patterns usage
-- Good app performance / Smooth UI experience
-- Unit tests
-- UI tests
-- Well documented README.md
-- Good looking visual design
+Patches are encouraged, and may be submitted by forking this project and submitting a pull request
+through GitHub.

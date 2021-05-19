@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ChocoTest</string>
+    <string name="product">Product: %1$s</string>
+    <string name="price">Price: %1$s</string>
+    <string name="nameTheOrder">Name the order</string>
+    <string name="ok">OK</string>
+    <string name="selectionId">selectionId</string>
+    <string name="loginHint">Login</string>
+    <string name="passwordHint">Password</string>
+    <string name="next">Next</string>
+    <string name="createOrder">Create order</string>
+    <string name="logOut">Log out</string>
+    <string name="products">Products</string>
+    <string name="orders">Orders</string>
+</resources>
