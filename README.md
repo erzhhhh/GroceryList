@@ -29,14 +29,14 @@ Screenshots
 -----------
 
 ![Start](screenshots/login.jpeg "Login page")
-![List of products](screenshots/productsList.jpeg "List of products")
-![Choosing products](screenshots/productsChoose.jpeg "Choosing products")
-![Create an order](screenshots/productsChoose.jpeg "Create an order")
-![Name the order](screenshots/nameTheOrder.jpeg "Name the order")
-![List of orders](screenshots/ordersList.jpeg "List of orders")
-![Order details](screenshots/orderDetails.jpeg "Detailed information about the order")
-![List of products_dark](screenshots/productsListDark.jpeg "List of products with dark mode")
-![Order details_dark](screenshots/orderDetailsDark.jpeg "Detailed information about the order with dark mode")
+![List of products](screenshots/productsList.png "List of products")
+![Choosing products](screenshots/productsChoose.png "Choosing products")
+![Create an order](screenshots/productsChoose.png "Create an order")
+![Name the order](screenshots/nameTheOrder.png "Name the order")
+![List of orders](screenshots/ordersList.png "List of orders")
+![Order details](screenshots/orderDetails.png "Detailed information about the order")
+![List of products_dark](screenshots/productsListDark.png "List of products with dark mode")
+![Order details_dark](screenshots/orderDetailsDark.png "Detailed information about the order with dark mode")
 
 Libraries Used
 --------------
